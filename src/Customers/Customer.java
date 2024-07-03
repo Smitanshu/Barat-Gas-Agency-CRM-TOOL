@@ -2,13 +2,11 @@ package Customers;
 
 
 import gasSupplier.gasAgency;
-public class Customer {
-
+public class Customer implements gasAgency {
     String name;
-
     String Street;
 
-    String area;
+    public String area;
     String pinCode;
     String mobile;
 
