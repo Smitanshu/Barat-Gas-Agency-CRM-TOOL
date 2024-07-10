@@ -47,7 +47,7 @@
 | status              | Date of the last booking    |
 
 
-## 5.package Gas booking
+## 5.Package Gas booking
 ### Class Delivery
 
 | Attribute           | Description                 |
