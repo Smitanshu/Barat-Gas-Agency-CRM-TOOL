@@ -40,9 +40,10 @@ public class Delivery extends Booking
             System.out.println("Booking not found!!!");
         }
     }
-    public void delPersonDetails
+    public void delPersonDetails()
         {
-           System.out.println("\n Enter the Delivery person Details :");
+           System.out.println("\n Enter the Delivery person Name :");
+
            delPersonName=new Scanner(System.in).nextLine();
            ////
 

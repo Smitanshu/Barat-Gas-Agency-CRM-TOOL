@@ -21,12 +21,12 @@ public class Booking extends GasConnection {
         System.out.println("Enter Booking  date :");
         dt=new Scanner(System.in).next();
         dt_1=null;
-        SimpleDateFormat dateFormat=new SimpleDateFormat("dd//MM/yyy");
+        SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyy");
         try{
             dt_1=dateFormat.parse(dt);
 
         }catch(Exception e){
-            System.out.println("Error in lastDate function :" + e);
+            System.out.println("Error in lastDate function :" + e.getMessage());
 
         }
 
