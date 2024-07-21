@@ -1,15 +1,19 @@
 package gasBooking;
+
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
+
+
 public class Delivery extends Booking
 {
 
-
     public String delPersonName;
-    int customerOtp;
-    public Delivery(String name, String mobile, String Street, String area, String pinCode, int numberofCylinder)
+    public int customerOtp;
+    public Delivery(String name,  String area, String pinCode,String mobile,  String Street,int numberofCylinder)
     {
-        super(name, mobile, Street, area, pinCode, numberofCylinder);
+        super(name,  Street, area, pinCode,mobile, numberofCylinder);
+
 
     }
 
@@ -23,26 +27,33 @@ public class Delivery extends Booking
         }
     }
 
+
+
     public void verifyOtp(){
-        if(status.equals("B"))
+           if (status != null && status.equals("B"))
         {
             System.out.println("Enter  OTP:");
             customerOtp=new Scanner(System.in).nextInt();
 
-            if(customerOtp!=otp  )
-            {
+            if(customerOtp != otp)
+            {   System.out.println("In verify otp");
                 status="C";
             }else {
                 status = "D";
             }
-        }else
-        {
-            System.out.println("Booking not found!!!");
         }
+        else
+        { System.out.println("In verify otp for where status is not equals to B");
+            System.out.println("Booking not found!!");
+        }
+
+
+
+
     }
     public void delPersonDetails()
         {
-           System.out.println("\n Enter the Delivery person Name :");
+           System.out.println("\n Enter the delivery person Name :");
 
            delPersonName=new Scanner(System.in).nextLine();
            ////

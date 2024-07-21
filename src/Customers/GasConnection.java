@@ -11,10 +11,10 @@ public class GasConnection extends Customer{
 
         }
       public Date lastDate=null;
-        SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yy");
+        SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyyy");
 
-    public GasConnection(String name, String mobile, String Street, String area, String pinCode, int numberOfCylinder) {
-        super(name, mobile, Street, area, pinCode);
+    public GasConnection(String name,  String Street, String area, String pinCode,String mobile, int numberOfCylinder) {
+        super(name,  Street, area, pinCode , mobile);
         this.numberOfCylinders = numberOfCylinders;
     }
 
@@ -28,7 +28,7 @@ public class GasConnection extends Customer{
 
         }
         catch(Exception e){
-            System.out.println("Error in last date :"+e);
+            System.out.println("Error in getlastdate() :"+e);
 
         }
 
